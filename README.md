@@ -44,7 +44,12 @@ Abrir y ejecutar el archivo Jupyter Notebook:
 proyecto.ipynb
 ```
 
-Puedes usar cualquier entorno compatible con Jupyter, como JupyterLab, VS Code, o Google Colab.
+Puedes ejecutarlo directamente de VS Code o abrirlo desde el navegador con:
+
+```bash
+uv run jupyter notebook
+```
+
 
 ## Fuentes de datos
 
