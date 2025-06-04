@@ -18,7 +18,9 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 2. Descargar los archivos zip de:
    https://drive.google.com/drive/folders/10ybeGb5neRgUZtUwErHyEbSa9IPo8Vlb?usp=sharing
+   
    Descomprimir los archivos.
+   
    Mover los archivos `.csv` a la carpeta `data`.
 
 ## Instalación de dependencias
