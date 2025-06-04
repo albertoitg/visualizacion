@@ -16,15 +16,10 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 1. Crear una carpeta llamada `data` en la raíz del proyecto.
 
-2. Descargar los archivos de matrícula desde el sitio oficial del Ministerio de Educación:  
-   https://datosabiertos.mineduc.cl/matricula-en-educacion-superior/  
-   Pegar los archivos descargados en la carpeta `data`.
-
-3. Descargar el archivo con los datos del CAE desde el siguiente enlace:  
-   https://portal.ingresa.cl/wp-content/uploads/2024/06/CP_2023_HISTORICA_FINAL.txt.zip  
-   Extraer el archivo.  
-   Asegurarse de guardar o convertir el archivo a formato `.csv`.  
-   Mover el archivo `.csv` a la carpeta `data`.
+2. Descargar los archivos zip de:
+   https://drive.google.com/drive/folders/10ybeGb5neRgUZtUwErHyEbSa9IPo8Vlb?usp=sharing
+   Descomprimir los archivos.
+   Mover los archivos `.csv` a la carpeta `data`.
 
 ## Instalación de dependencias
 
