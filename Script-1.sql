@@ -130,10 +130,12 @@ left join (
 			where vm.anio_ing_carr_ori = vm.anio_ing_carr_act 
 			group by vm."MRUN") as vm_ultimo 
 on m."MRUN" = vm_ultimo."MRUN"
-where m.dur_total_carr > 4
+where m.dur_total_carr > 4 and c."COD_REG_RBD" = 13
 order by m."MRUN" 
 ;
 
+
+-- OK OK
 select 
 	nem."AGNO_EGRESO",
 	nem."MRUN", 
@@ -147,6 +149,7 @@ select
 	c."COD_REG_RBD" as region, 
 	c."LATITUD" ,
 	c."LONGITUD",
+	c."COD_DEPE2",
 	nem."PERCENTIL",
 	m.dur_total_carr/2 as duracion_carrera,
 	(vm_ultimo.ultimo_agno - m.anio_ing_carr_ori + 1) as permanencia,
@@ -202,7 +205,8 @@ select
 	on m."MRUN" = vm_ultimo."MRUN"
 	where m.dur_total_carr > 4 and c."COD_REG_RBD" = 13
 	order by m."MRUN") as consolidado
-	group by consolidado.comuna 
+	group by consolidado.comuna
+	having count(*) >= 20
 	order by porcentaje_desertores desc
 ;
 
