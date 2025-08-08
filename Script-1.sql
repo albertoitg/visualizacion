@@ -138,11 +138,13 @@ order by m."MRUN"
 -- OK OK
 select 
 	nem."AGNO_EGRESO",
-	nem."MRUN", 
+	nem."MRUN",
+	m.gen_alu,
 	m.cat_periodo, 
 	m.nomb_inst,
 	M.comuna_sede,
-	m.nomb_carrera, 
+	m.nomb_carrera,
+	m.codigo_demre, 
 	m.anio_ing_carr_ori,
 	vm_ultimo.ultimo_agno,
 	c."NOM_COM_RBD" as comuna,
@@ -210,6 +212,10 @@ select
 	order by porcentaje_desertores desc
 ;
 
+select ad."CODIGO", avg(ad."PTJE_POND") as puntaje_carrera
+from admision_demre ad
+group by ad."CODIGO"
+;
 
 
 
